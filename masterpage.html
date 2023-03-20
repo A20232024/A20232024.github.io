@@ -12,15 +12,32 @@
 			
 		</style>
 		<link rel="icon" type="images/x-icon" href="https://a20232024.github.io/images/security.png" />
+
+		<script>
+			function startTime(){
+				const today = new Date();
+				let h = today.getHours();
+				let m = today.getMinutes();
+				let s = today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById('reloj').innerHTML = h + ":" + m + ":" + s;
+				setTimeout(startTime, 1000);
+			}
+			function checkTime(i) {
+				if (i < 10) { i = "0" + i };
+				return i;
+			}
+		</script>
 	</head>
 
-	<body>
+	<body onload="startTime()">
 
 
 
-<div class="container-fluid text-center" style="background-color:#336699 ;">
+<div id="reloj" class="container-fluid text-center" style="color:white; font-size:200%;">
 	<br>
-<h3> Links to make it easier to find stuff. </h3>
+
 	<br>
 </div>
 <br>
