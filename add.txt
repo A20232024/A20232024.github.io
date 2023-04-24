@@ -1,2 +1,0 @@
-@echo off
-for /f "tokens=* delims= " %%a in (somefile.txt) do ( echo www%%ayyy >> newfile.txt )
